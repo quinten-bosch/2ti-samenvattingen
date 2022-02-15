@@ -35,7 +35,7 @@
 
 
 
-$myfiles = array_diff(scandir(getcwd()), array('.', '..', 'lars', 'Parsedown.php', 'index.php', 'browser.php', 'parse.php', 'dark.css', 'samenvatting.php', 'Deadlines.md', '.git', '.gitattributes', 'README.md', '.github' )); 
+$myfiles = array_diff(scandir(getcwd()), array('.', '..', 'lars', 'Parsedown.php', 'index.php', 'browser.php', 'parse.php', 'dark.css', 'samenvatting.php', 'Deadlines.md', '.git', '.gitattributes', 'README.md', '.github', '.ftp-deploy-sync-state.json ' )); 
 
 echo "<h4><a href='samenvatting.php?file=Deadlines'?> Deadlines</a></h4>";
 foreach ($myfiles as $value) {
