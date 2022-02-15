@@ -4,6 +4,8 @@
 - 100% van de punten staan op het examen.
 - Alphacopy (Course and Slides)
 
+- 2 Tasks to complete
+ - Open book exam
 ---
 
 ## Handige links
