@@ -12,4 +12,4 @@
 	- 02_Eerste hoofdstuk.md
 	- 03_Tweede hoofdstuk.md
 
-#### De website toont de bestanden in de genummerde volgorde
+De website toont de bestanden in de genummerde volgorde
