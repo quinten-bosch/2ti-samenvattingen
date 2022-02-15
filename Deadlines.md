@@ -15,7 +15,7 @@ Eindopdracht + Peer Assessment:
 ---
 ### WEB 4
 
-Deelopdracht 1 Ajax:
+Deadline (verplicht voor examen):
 - 29/04/2022 23:59
 
 ---
