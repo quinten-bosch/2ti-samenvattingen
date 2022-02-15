@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Slab">
  <!-- Milligram CSS -->
- <link rel="stylesheet" href="vendor/milligram.css">
- <link rel="stylesheet" href="vendor/dark.css">
+ <link rel="stylesheet" href="vendor/github.css">
+
   <style>
  p { display: inline; }
  body{
@@ -16,6 +16,27 @@
    overflow-wrap: break-word;
    
 }
+html, body {
+   background-color: #0d1117;
+  margin:0px;
+  height:100%;
+}
+
+.markdown-body {
+		box-sizing: border-box;
+		min-width: 200px;
+		margin: 0px;
+		margin: 0 auto;
+      border: 0px;
+		padding: 45px;
+      
+	}
+
+	@media (max-width: 767px) {
+		.markdown-body {
+			padding: 15px;
+		}
+	}
 
 
 pre{
@@ -54,10 +75,13 @@ chdir($_GET["folder"]);
 
 $contents = file_get_contents($_GET["file"]. ".md");
 //$Parsedown = new Parsedown();
-//echo $Parsedown->text($contents);
+//echo $Parsedown->text($contents)'
+?>
+<article class="markdown-body">
+	
 
-
-echo $parser->parse($contents);
+<?php echo $parser->parse($contents); 
 
 echo "<footer> &copy; Quinten Bosch | Ik ben niet verantwoordelijk voor mogelijke fouten. | " . "Laatst gewijzigd: " . date ("Y/m/d H:i",filemtime($_GET['file']. ".md"));
 ?>
+</article>
