@@ -498,7 +498,9 @@ ol {
   list-style: decimal inside;
 }
 
-
+ul {
+  list-style: circle inside;
+}
 
 .button,
 button,
