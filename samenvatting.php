@@ -51,7 +51,7 @@ chdir($_GET["folder"]);
 //echo "geen test";
 }
 
-include('Parsedown.php');
+
 $contents = file_get_contents($_GET["file"]. ".md");
 //$Parsedown = new Parsedown();
 //echo $Parsedown->text($contents);
