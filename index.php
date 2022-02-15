@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Slab">
  <!-- Milligram CSS -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
- <link rel="stylesheet" href="https://2ti.quintenbosch.be/dark.css">
+ <link rel="stylesheet" href="vendor/milligram.css">
+ <link rel="stylesheet" href="vendor/dark.css">
   <style>
   
   body {
@@ -35,7 +35,7 @@
 
 
 
-$myfiles = array_diff(scandir(getcwd()), array('.', '..', 'lars', 'Parsedown.php', 'index.php', 'browser.php', 'parse.php', 'dark.css', 'samenvatting.php', 'Deadlines.md', '.git', '.gitattributes', 'README.md', '.github', '.ftp-deploy-sync-state.json' )); 
+$myfiles = array_diff(scandir(getcwd()), array('.', '..', 'lars', 'Parsedown.php', 'index.php', 'browser.php', 'parse.php', 'dark.css', 'samenvatting.php', 'Deadlines.md', '.git', '.gitattributes', 'README.md', '.github', '.ftp-deploy-sync-state.json', 'vendor' )); 
 
 echo "<h4><a href='samenvatting.php?file=Deadlines'?> Deadlines</a></h4>";
 foreach ($myfiles as $value) {

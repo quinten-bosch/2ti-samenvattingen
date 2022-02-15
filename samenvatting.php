@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Slab">
  <!-- Milligram CSS -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
- <link rel="stylesheet" href="https://2ti.quintenbosch.be/dark.css">
+ <link rel="stylesheet" href="vendor/milligram.css">
+ <link rel="stylesheet" href="vendor/dark.css">
   <style>
  p { display: inline; }
  body{
@@ -17,9 +17,12 @@
    
 }
 
+
+
 pre{
    max-width: 90%; overflow-wrap: break-word;
 }
+
 
  footer{ opacity: 0.7;}
   </style>
@@ -33,6 +36,9 @@ pre{
 $testurl = strstr($_GET['file'], '_');
     
 $goodUrl = str_replace('_', '', $testurl);
+
+require_once __DIR__.'/vendor/autoload.php';
+$parser = new \cebe\markdown\GithubMarkdown();
 
 
 
@@ -48,8 +54,11 @@ chdir($_GET["folder"]);
 
 include('Parsedown.php');
 $contents = file_get_contents($_GET["file"]. ".md");
-$Parsedown = new Parsedown();
-echo $Parsedown->text($contents);
+//$Parsedown = new Parsedown();
+//echo $Parsedown->text($contents);
+
+
+echo $parser->parse($contents);
 
 echo "<footer> &copy; Quinten Bosch | Ik ben niet verantwoordelijk voor mogelijke fouten. | " . "Laatst gewijzigd: " . date ("Y/m/d H:i",filemtime($_GET['file']. ".md"));
 ?>
