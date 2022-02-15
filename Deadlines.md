@@ -13,3 +13,9 @@ Eindopdracht + Peer Assessment:
 - 30/05/2022 23:59
 
 ---
+### WEB 4
+
+Deelopdracht 1 Ajax:
+- 29/04/2022 23:59
+
+---
