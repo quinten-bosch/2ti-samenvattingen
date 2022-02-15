@@ -490,7 +490,6 @@ ol ul,
 ul dl,
 ul ol,
 ul ul {
-  list-style-type: none;
   font-size: 90%;
   margin: 1.5rem 0 1.5rem 3.0rem;
 }
