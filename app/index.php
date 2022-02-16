@@ -17,7 +17,6 @@
   body {
   font-family: 'Roboto Slab', serif;
 }
-
   a, a:visited, a:hover, a:active {
     color: inherit;
   }
