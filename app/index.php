@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Slab">
  <!-- Milligram CSS -->
- <link rel="stylesheet" href="vendor/milligram.css">
- <link rel="stylesheet" href="vendor/dark.css">
+ <link rel="stylesheet" href="app/vendor/milligram.css">
+ <link rel="stylesheet" href="app/vendor/dark.css">
   <style>
   
   body {
@@ -34,12 +34,12 @@
 <?php
 
 
+chdir("..");
+$myfiles = array_diff(scandir(getcwd()), array('.', '..', 'lars', 'Parsedown.php', 'index.php', 'browser.php', 'parse.php', 'dark.css', 'samenvatting.php', 'Deadlines.md', '.git', '.gitattributes', 'README.md', '.github', '.ftp-deploy-sync-state.json', 'vendor', '.htaccess', 'app' )); 
 
-$myfiles = array_diff(scandir(getcwd()), array('.', '..', 'lars', 'Parsedown.php', 'index.php', 'browser.php', 'parse.php', 'dark.css', 'samenvatting.php', 'Deadlines.md', '.git', '.gitattributes', 'README.md', '.github', '.ftp-deploy-sync-state.json', 'vendor' )); 
-
-echo "<h4><a href='samenvatting.php?file=Deadlines'?> Deadlines</a></h4>";
+echo "<h4><a href='app/samenvatting.php?file=Deadlines'?> Deadlines</a></h4>";
 foreach ($myfiles as $value) {
-    echo "<h4><a href='browser.php?folder=$value' > $value </a></h4>";
+    echo "<h4><a href='app/browser.php?folder=$value' > $value </a></h4>";
   }
   
 

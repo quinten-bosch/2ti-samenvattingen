@@ -53,6 +53,7 @@ pre{
 
 <?php
 
+echo getcwd();
 $testurl = strstr($_GET['file'], '_');
     
 $goodUrl = str_replace('_', '', $testurl);
@@ -60,7 +61,7 @@ $goodUrl = str_replace('_', '', $testurl);
 require_once __DIR__.'/vendor/autoload.php';
 $parser = new \cebe\markdown\GithubMarkdown();
 
-
+chdir("..");
 
 if($_GET["file"] == "Deadlines"){
    echo "<title> Deadlines </title>";
