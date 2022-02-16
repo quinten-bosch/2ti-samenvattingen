@@ -1,6 +1,13 @@
 # Internetprogrammeren minor [MBI39X] | 3SP
 ---
 
+
+
+## Handige links
+- [Demo code github](https://github.com/UCLLIpMinor)
+
+---
+
 - Partiële of permanente evaluatie met examen tijdens de examenperiode
 
 - 2 grote delen
