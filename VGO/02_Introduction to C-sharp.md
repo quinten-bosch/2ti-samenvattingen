@@ -1,4 +1,4 @@
-## Introduction to C#
+## Introduction to C&num; 
 ---
 
 
@@ -255,6 +255,8 @@ More info:
 
 ### Lambdas
 
+This chapter is best explained here:
+- [Lambdas | C# Introduction](https://ucll-vgo.github.io/csharp-intro/lambdas.html)
 
 
 More info:
