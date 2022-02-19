@@ -53,7 +53,7 @@ pre{
 
 <?php
 
-echo getcwd();
+
 $testurl = strstr($_GET['file'], '_');
     
 $goodUrl = str_replace('_', '', $testurl);
