@@ -4,7 +4,7 @@
 ### [Link naar online versie](https://2ti.quintenbosch.be/)
 ---
 
-### Zelf iets toevoegen? 🡺 Pull request 
+### Zelf iets toevoegen/aanpassen? 🡺 Pull request 
 
 #### Folder structuur voorbeeld:
 - Vak
