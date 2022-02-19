@@ -33,6 +33,12 @@
     - 17/05/2022 | 3c: Geef online via Teams de instructies en neem dit op.
 
 ---
+
+### IP Major
+
+Opdracht Juni:
+- 22/05/2022 29:59
+
 ### IP Minor
 
 
