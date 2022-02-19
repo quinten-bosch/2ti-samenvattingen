@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Slab">
  <!-- Milligram CSS -->
- <link rel="stylesheet" href="vendor/github.css">
+ <link rel="stylesheet" href="../../../app/vendor/github.css">
 
   <style>
  p { display: inline; }
@@ -53,28 +53,46 @@ pre{
 
 <?php
 
+$url =  "{$_SERVER['REQUEST_URI']}";
 
-$testurl = strstr($_GET['file'], '_');
+$escaped_url = htmlspecialchars( $url, ENT_QUOTES, 'UTF-8' );
+
+//echo $url;
+//echo "<br>";
+//echo $escaped_url;
+//echo "<br>";
+//echo urldecode($escaped_url);
+//echo "<br>";
+$decoded =  urldecode($escaped_url);
+$new_name = substr($decoded, strpos($decoded, 'hp/') + 3);
+//echo "<br>";
+//echo $new_name;
+
+$exploded = explode("/",$new_name);
+
+$testurl = strstr($exploded[1], '_');
     
 $goodUrl = str_replace('_', '', $testurl);
+
+
 
 require_once __DIR__.'/vendor/autoload.php';
 $parser = new \cebe\markdown\GithubMarkdown();
 
 chdir("..");
 
-if($_GET["file"] == "Deadlines"){
+if($exploded[1] == "Deadlines"){
    echo "<title> Deadlines </title>";
    //echo "testttt";
 }else{
 
    echo "<title>". $goodUrl . "</title>";
-chdir($_GET["folder"]);
+chdir($exploded[0]);
 //echo "geen test";
 }
 
 
-$contents = file_get_contents($_GET["file"]. ".md");
+$contents = file_get_contents($exploded[1]. ".md");
 //$Parsedown = new Parsedown();
 //echo $Parsedown->text($contents)'
 ?>
@@ -83,6 +101,6 @@ $contents = file_get_contents($_GET["file"]. ".md");
 
 <?php echo $parser->parse($contents); 
 
-echo "<footer> &copy; Quinten Bosch | Ik ben niet verantwoordelijk voor mogelijke fouten. | " . "Laatst gewijzigd: " . date ("Y/m/d H:i",filemtime($_GET['file']. ".md"));
+echo "<footer> &copy; Quinten Bosch | Ik ben niet verantwoordelijk voor mogelijke fouten. | " . "Laatst gewijzigd: " . date ("Y/m/d H:i",filemtime($exploded[1]. ".md"));
 ?>
 </article>
