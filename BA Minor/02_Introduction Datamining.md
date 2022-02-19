@@ -100,7 +100,7 @@ What is Data mining?
 #### Spurious Correlations
 
 - Discovering meaningless patterns
-- **Bonferroni's princible**
+- **Bonferroni's principle**
     - > (roughly) if you look in more places for interesting patterns than your amount of data will support, you are bound to find crap
 - More variables &rarr; higher chance of correlation by chance
 
