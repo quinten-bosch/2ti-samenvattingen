@@ -8,6 +8,18 @@
  - Open book exam
 ---
 
+
+## How to do well in this class
+
+- Attend all lectures and exercise sessions
+- Actively participate in class activities
+    - Ask questions
+    - Think critically
+- Apply learned concepts in different settings
+
+
+---
+
 ## Handige links
 - [Projektwerk BA Minor](https://projektwerk.ucll.be/projects/ba_minor)
 
