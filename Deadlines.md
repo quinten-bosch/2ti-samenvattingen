@@ -34,6 +34,12 @@
 
 ---
 
+### Databanken 2
+
+Taak in groep, zelf inscrhijven voor een week
+
+---
+
 ### IP Major
 
 Opdracht Juni:
