@@ -72,7 +72,7 @@ What is Data mining?
     - Applications
     - Industrial setting
 - ML
-    - More theoretica
+    - More theoretical
     - Research/Academia
 
 ---
