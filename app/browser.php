@@ -40,7 +40,7 @@ foreach ($myfiles as $value) {
     $goodUrl = str_replace('.md', '', $goodUrl);
     $url2 = $value;
     $goodUrl2 = str_replace('.md', '', $url2);
-    echo "<h4><a href='samenvatting.php?folder=$dirr&file=$goodUrl2 ' target='__blank'> $goodUrl </a></h4>";
+    echo "<h4><a href='samenvatting.php/$dirr/$goodUrl2 ' target='__blank'> $goodUrl </a></h4>";
   
   }
 ?>

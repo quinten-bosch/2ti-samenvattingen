@@ -81,18 +81,20 @@ $parser = new \cebe\markdown\GithubMarkdown();
 
 chdir("..");
 
-if($exploded[1] == "Deadlines"){
+if(isset($_GET['file'])){
    echo "<title> Deadlines </title>";
+   $contents = file_get_contents("Deadlines.md");
    //echo "testttt";
 }else{
 
    echo "<title>". $goodUrl . "</title>";
 chdir($exploded[0]);
+$contents = file_get_contents($exploded[1]. ".md");
 //echo "geen test";
 }
 
 
-$contents = file_get_contents($exploded[1]. ".md");
+
 //$Parsedown = new Parsedown();
 //echo $Parsedown->text($contents)'
 ?>
