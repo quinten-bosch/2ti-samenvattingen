@@ -36,10 +36,13 @@ chdir("..");
 $myfiles = array_diff(scandir(getcwd()), array('.', '..', 'lars', 'Parsedown.php', 'index.php', 'browser.php', 'parse.php', 'dark.css', 'samenvatting.php', 'Deadlines.md', '.git', '.gitattributes', 'README.md', '.github', '.ftp-deploy-sync-state.json', 'vendor', '.htaccess', 'app' )); 
 
 echo "<h4><a href='app/samenvatting.php?file=Deadlines'?> Deadlines</a></h4>";
+
+
 foreach ($myfiles as $value) {
     echo "<h4><a href='app/browser.php?folder=$value' > $value </a></h4>";
   }
   
+  echo "<h4><a href='https://github.com/quinten-bosch/2ti-samenvattingen'>Github</a></h4>";
 
   ?>
 </body>
