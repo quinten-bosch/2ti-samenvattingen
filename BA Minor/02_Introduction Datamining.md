@@ -69,7 +69,7 @@ What is Data mining?
 
 - Data mining focus on
     - Scalability
-    - Applicaions
+    - Applications
     - Industrial setting
 - ML
     - More theoretica
