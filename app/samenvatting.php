@@ -6,9 +6,10 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Slab">
  <!-- Milligram CSS -->
  <link rel="stylesheet" href="../../../app/vendor/github.css">
- <link rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+ <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+ <script src="../../../app/vendor/highlight.min.js"></script>
+
+      <!--<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>-->
 <script>hljs.highlightAll();</script>
  <style>
  p { display: inline; }
