@@ -317,3 +317,105 @@ value = map[:x] || :oops   # value = :oops
 %{a => x} = map                   # x is now 1
 %{a => x, b => y, c => z} = map   # x = 1, y = 2, z = 3
 ```
+
+---
+
+### First Class Functions
+
+#### Receiving functions as parameter
+- [Loops in Functional Languages · WannesFransen1994/elixir-learning-materials · GitHub](https://github.com/WannesFransen1994/elixir-learning-materials/blob/master/elixir-basics/reading-materials/loops.md)
+
+Calling functions:
+```exs
+defmodule Hello do
+  def hello() do
+    IO.puts('hello')
+  end
+end
+
+# Have func refer to hello
+func = &Hello.hello/0
+
+# Call hello directly
+Hello.hello()
+
+# Call via func
+func.()
+```
+
+
+#### **Returning functions**
+
+> Let's start simple. Say you have a function foo:
+
+```exs
+defmodule Foo do
+    def foo(x) do
+        ...
+    end
+end
+```
+
+> If you want to "pick up" foo as if it were a value, you need to use a special syntax in Elixir, namely &Foo.foo/1. The ampersand indicates "I am referring to a function here", the /1 corresponds to the arity.
+
+```exs
+defmodule Foo do
+    # Referred to using &Foo.foo/0
+    def foo() do
+        ...
+    end
+
+    # Referred to using &Foo.foo/1
+    def foo(x) do
+        ...
+    end
+
+    # Referred to using &Foo.foo/2
+    def foo(x, y) do
+        ...
+    end
+end
+```
+
+> Once you "hold" the function, you can do whatever you want with it:
+
+```exs
+# Store it in a variable
+f = &Foo.foo/1
+
+# Pass it as argument
+some_function(&Foo.foo/1)
+
+# Return it
+def bar() do
+    &Foo.foo/1
+end
+```
+
+#### **Lambdas**
+
+```exs
+def foo(x) do
+    x
+end
+
+def get_foo() do
+    &foo/1
+end
+```
+
+Can be written as:
+
+```exs
+def get_foo() do
+    fn x -> x end
+end
+```
+
+---
+
+### Goodbye Loops
+
+Mostly excercises
+
+---
