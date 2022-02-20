@@ -13,3 +13,8 @@
 	- 03_Tweede hoofdstuk.md
 
 De website toont de bestanden in de genummerde volgorde.
+
+### Contributors
+<a href="https://github.com/quinten-bosch/2ti-samenvattingen/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=quinten-bosch/2ti-samenvattingen" />
+</a>
