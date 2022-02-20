@@ -143,3 +143,177 @@ def foo(x \\ 5) do
 end
 ```
 ---
+
+### 02. Data Types
+
+#### **Atoms**
+
+> Atoms can be best compared to JavaScript's symbols, which you are probably not familiar with... So let's try a different approach. This is what an atom looks like: :abc. Want another one? Here you go: :hello. Still not satisfied? :avff.
+
+> The real Elixir does just that: atoms are actually integers. Internally, a large table associating atoms to integers is kept. Whenever you mention an atom, Elixir will look it up in this table to see if it has been encountered before. If that is the case, the associated integer is returned. If not, the atom is added to the table and linked to an as of yet unused integer. This table is also kept synchronized across machines, allowing atoms to be used to communicate efficiently between machines.
+
+```exs
+defmodule Cards do
+  defp numericValue(k) when is_number(k), do: k
+  defp numericValue(:jack), do: 11
+  defp numericValue(:queen), do: 12
+  defp numericValue(:king), do: 13
+  defp numericValue(:ace), do: 14
+
+  def higher?(x, y), do: numericValue(x) > numericValue(y)
+end
+```
+> Implement a function Cards.higher?(x, y) that checks whether x is a higher card than y. There are thirteen possible cards. They are, in increasing order of value: 2, ..., 10, :jack, :queen, :king, :ace.
+
+---
+
+#### **Tuples**
+
+For this chapter reading the full explanation is strongly recommended:
+- [GitHub - WannesFransen1994/elixir-learning-materials: repository that contains multiple learning materials with code examples.](https://github.com/WannesFransen1994/elixir-learning-materials)
+
+#### Creation
+> { 1, 2, 3 } is a tuple of three long, containing the elements 1, 2 and 3. You can put anything you want in a tuple, including other tuples. The elements don't need to have matching types.
+
+Write a function Math.quotrem(x, y) that returns a tuple containing
+- the quotient (integer division) of x and y.
+- the remainder (modulo) of the division of x by y.
+
+```exs
+defmodule Math do
+  def quotrem(x, y) when is_number(x) and is_number(y), do: { div(x, y), rem(x, y) }
+end
+```
+---
+
+#### Destructuring
+
+> Tuples are also used to group related data together, such as objects do in OO-languages. For example, say you want to represent a card, which consists of a value (ace, 2...10, jack, queen, king) and a suit (hearts, clubs, spades and diamonds), you would use a tuple and introduce the convention to have the tuple's first element be the value and the second the suit: {value, suit}. The other way around would work as well, you only need to be consistent about it.
+
+> Destructuring is also available in Elixir:
+
+```exs
+# Elixir
+def doSomethingWithCard(card) do
+    # Retrieve card components
+    {value, suit} = card
+    ...
+end
+```
+
+> Say your function receives a tuple but is not interested in all its value, in order to ignore a value, you need to do so explicitly:
+
+```exs
+# Elixir
+def caresOnlyAboutValue( { value, _ } ) do
+    ...
+end
+```
+---
+#### Destructuring Remarketed
+
+> Remember `cond`? That construct that replaces if-chains in Elixir? It looked like this:
+
+```exs
+cond do
+  condition1 -> ...
+  condition2 -> ...
+  condition3 -> ...
+end
+```
+
+> Turns out you can also use the similar `case` to pattern match!
+
+```exs
+case x do
+  pattern1 -> ...
+  pattern2 -> ...
+  pattern3 -> ...
+end
+```
+
+> In fact, you can even throw in some guards, too:
+
+```exs
+# For purists that don't consider 5 5 5 5 5 a real full house
+def full_house?(cards) do
+    case sort_cards_by_value(x) do
+        {x, x, x, y, y} when x != y -> true
+        {y, y, x, x, x} when x != y -> true
+        _                           -> false
+    end
+end
+```
+---
+
+### **Lists**
+
+#### Creation
+
+- [Lists · WannesFransen1994/elixir-learning-materials · GitHub](https://github.com/WannesFransen1994/elixir-learning-materials/blob/master/elixir-basics/reading-materials/lists.md)
+
+Example
+> We shortly study a simple function repeat(n, x) that creates a list containing n occurrences of x.
+
+
+```exs
+def repeat(0, x), do: []
+def repeat(n, x), do: [x | repeat(n - 1, x)]
+```
+Make sure you take the time necessary to fully understand how this algorithm works.
+- The base case is where n == 0 is simple: 0 repetitions of anything is simple the empty list.
+- Next comes the inductive case. In general, writing this case consists of finding a way to express repeat(n, x) in terms of repeat(n - 1, x). In this example, the repetition of n×x is the equal to taking (n-1) × x, and adding an extra x to it.
+
+#### Destructuring
+
+Regarding tuples, we mentioned destructuring:
+
+`{first, second, third} = tuple`
+
+The same technique is available on lists:
+
+```elixir
+xs = [ 1, 2, 3, 4, 5 ]
+
+[ head | tail ] = xs
+# head == 1
+# tail == [2, 3, 4, 5]
+
+[ first, second | rest ] = xs
+# first = 1
+# second = 2
+# rest = [3, 4, 5]
+```
+---
+
+
+### **Maps**
+
+Associative containers are data structures that associate values with keys. In Elixir, the built-in associative containers are called `Map`. Map literals take the form `%{key1 => val1, key2 => val2, ...}`.
+
+> Given you are already familiar with map-like data structures, there is not a lot to tell. The main difference is that Elixir's maps cannot be modified, so that's something you'll have to keep in mind when interacting with them.
+
+```exs
+> Given a map, you'll probably want to read data from it. There are many ways to proceed:
+map = %{a: 1, b: 2, c: 3}
+
+# Map.get/2 returns nil if key is not part of map
+value = Map.get(map, :a)    # value = 1
+value = Map.get(map, :x)    # value = nil
+
+# Map.get/3 returns default_if_missing in case of a missing key
+value = Map.get(map, :b)       # value = 2
+value = Map.get(map, :x, 0)    # value = 0
+
+# Indexing operator returns nil for missing keys
+value = map[:a]   # value = 1
+
+# Indexing operator combined with ||
+# Careful, there is a slight difference with Map.get/3!
+# Cakepoint for first who tells us the difference
+value = map[:x] || :oops   # value = :oops
+
+# Destructuring
+%{a => x} = map                   # x is now 1
+%{a => x, b => y, c => z} = map   # x = 1, y = 2, z = 3
+```
