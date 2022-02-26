@@ -45,6 +45,8 @@ Taak in groep, zelf inscrhijven voor een week
 Opdracht Juni:
 - 22/05/2022 29:59
 
+---
+
 ### IP Minor
 
 
