@@ -42,8 +42,8 @@ Taak in groep, zelf inscrhijven voor een week
 
 ### IP Major
 
-Woensdag 2 Maart van 19:00 - 20:00 is er een verplichte gastlectuur van Brooklin Myers (DockYard).
-Aangezien over dit hoofdstuk een **examenvraag** zal komen, is aanwezigheid een must.
+Woensdag 2 Maart van 19:00 - 20:00 is er een verplichte gastlectuur van Brooklin Myers (DockYard).  
+Aangezien over dit hoofdstuk een **examenvraag** zal komen, is aanwezigheid een must.  
 Dit zal hoogstwaarschijnlijk via Google Meet verlopen. Dit delen we later nog mee.
 
 Opdracht Juni:
