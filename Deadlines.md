@@ -22,7 +22,7 @@
     - 17/05/2022 | 1e: Maak een website met je e-porfolio
 
 - Opdracht 2
-    - 02/03/2022 | 2a: Maak een ontwerp voor een mail ivm een aanvraag voor het interview van de IT-professional
+    - 01/03/2022 | 2a: Maak een ontwerp voor een mail ivm een aanvraag voor het interview van de IT-professional
     - 15/03/2022 | 2b: Voorbereiding interview: opstellen van een vragenlijst
     - 10/05/2022 | 2c: Maak een opname van het online interview
     - 17/05/2022 | 2d: Maak een presentatie ivm het interview en  neem de diavoorstelling op.
