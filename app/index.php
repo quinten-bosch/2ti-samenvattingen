@@ -53,8 +53,8 @@ foreach ($myfiles as $value) {
   
   echo "<hr style='width:45%;'>";
 echo "<h3> Links: </h3>";
-echo "<h4><a style='padding-left:5%; href='app/samenvatting.php?file=Deadlines'?> Deadlines</a></h4>";
-echo "<h4><a style='padding-left:5%; href='https://github.com/quinten-bosch/2ti-samenvattingen'>Github</a></h4>";
+echo "<h4><a style='padding-left:5%;' href='app/samenvatting.php?file=Deadlines'?> Deadlines</a></h4>";
+echo "<h4><a style='padding-left:5%;' href='https://github.com/quinten-bosch/2ti-samenvattingen'>Github</a></h4>";
 ?>
 </div>
 </body>
