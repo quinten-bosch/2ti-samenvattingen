@@ -43,3 +43,4 @@ Slides of this chapter:
 
 ##### **Summary Statistics**
 
+- Use the slides that are linked above for a more detailed explanation
