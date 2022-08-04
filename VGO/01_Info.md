@@ -12,6 +12,8 @@
 ## Handige links
 - [Github C# Intro](https://github.com/ucll-vgo/csharp-intro)
 - [Begeleidende tekst](https://ucll-vgo.github.io/csharp-intro/)
+- [GitHub Introduction to WPF Basics](https://github.com/ucll-vgo/vgo-temperature-converter)
+- [Home · Wiki · GitHub](https://github.com/ucll-vgo/vgo-temperature-converter/wiki)
 
 ---
 [ECTS](https://onderwijsaanbod.leuven.ucll.be/2021/syllabi/n/MBI39XN.htm#activetab=doelstellingen_idm214160).
