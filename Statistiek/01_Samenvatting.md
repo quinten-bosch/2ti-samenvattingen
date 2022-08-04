@@ -14,7 +14,7 @@ vb. 1x gooien met een dobbelsteen &rarr; wat is de kans dat je 6 ogen gooit?
 
 $ P(A) = {{aantal\ gunstige\ uitkomsten} \over {aantal\ mogelijke\ uitkomsten} } $
 
-$ = { \#A \over \#Ω} $
+$={ \#A \over \#Ω} $
 
 ! voorwaarde: alle uitkomsten zijn even waarschijnlijk + universum is eindig
 vb: wat is de kans dat je 2 of meer gooit?
@@ -31,3 +31,7 @@ Eigenschappen van kansen:
 &nbsp; &nbsp; &nbsp; &nbsp; &rarr; alle mogelijke uitkomsten noteren
 &nbsp; &nbsp; &nbsp; &nbsp; bv: gooien met 2 dobbelstenen &rarr; wat is de kans op som = 6?
 &nbsp; &nbsp; &nbsp; &nbsp; $ {P(A) = {5 \over 36}} $
+
+### H2: kansen van gecombineerde gebeurtenissen
+
+- kans van de unie - de som regel
