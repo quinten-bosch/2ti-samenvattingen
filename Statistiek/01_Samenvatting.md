@@ -6,4 +6,4 @@ vb. 1x gooien met een dobbelsteen &rarr; wat is de kans dat je 6 ogen gooit?
 
 <u style="text-decoration:underline; text-decoration-color: blue;">Kansmodel</u>
 
-- uitkomstenverzameling (universum): \it
+- uitkomstenverzameling (universum): Ω = {1,2,3,4,5,6} <div style="color:blue"> = alle mogelijkheden</div>
