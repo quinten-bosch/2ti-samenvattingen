@@ -1,4 +1,9 @@
-### Test
+## Deel 1: Kansrekenen
 
-When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
-$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+### H1: Opstellen van een kansmodel
+
+vb. 1x gooien met een dobbelsteen &rarr; wat is de kans dat je 6 ogen gooit?
+
+<u style="text-decoration:underline; text-decoration-color: blue;">Kansmodel</u>
+
+- uitkomstenverzameling (universum): \Omega Ω
